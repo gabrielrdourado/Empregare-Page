@@ -1,0 +1,22 @@
+﻿@model List<VagasModel>
+
+@{
+    foreach (var item in Model)
+    {
+        <div class="vaga-item col-7 col-sm-4 col-md-3 p-3 pl-5 text-justify">
+            <div>
+                <h5>@item.Cargo</h5>
+                <table>
+                    <tr>
+                        <td class="text-center"><i class="fas fa-map-marker-alt"></i></td>
+                        <td class="pl-1">@item.Cidade</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><i class="fas fa-money-bill-wave"></i></td>
+                        <td class="pl-1">R$ @String.Format("{0:0,0.00}", item.Salario)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    }
+}
